@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :stocks
+  resources :warehouses
   resources :items
   resources :categories
   resources :sub_categories
