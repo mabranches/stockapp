@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160425215422) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.datetime "created_at",             null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160425215422) do
   create_table "items", force: :cascade do |t|
     t.string   "name",            limit: 255
     t.string   "description",     limit: 255
-    t.integer  "sub_category_id", limit: 4
+    t.integer  "sub_category_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end
@@ -30,10 +33,10 @@ ActiveRecord::Schema.define(version: 20160425215422) do
   add_index "items", ["sub_category_id"], name: "index_items_on_sub_category_id", using: :btree
 
   create_table "stocks", force: :cascade do |t|
-    t.integer  "item_id",      limit: 4
-    t.integer  "warehouse_id", limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "item_id"
+    t.integer  "warehouse_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "stocks", ["item_id"], name: "index_stocks_on_item_id", using: :btree
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160425215422) do
 
   create_table "sub_categories", force: :cascade do |t|
     t.string   "name",        limit: 255
-    t.integer  "category_id", limit: 4
+    t.integer  "category_id"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
@@ -54,7 +57,7 @@ ActiveRecord::Schema.define(version: 20160425215422) do
     t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
+    t.integer  "sign_in_count",                      default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
