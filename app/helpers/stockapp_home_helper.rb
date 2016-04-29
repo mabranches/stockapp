@@ -1,0 +1,2 @@
+module StockappHomeHelper
+end

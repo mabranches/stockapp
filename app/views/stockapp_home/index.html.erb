@@ -1,0 +1,14 @@
+<h1>StockappHome#index</h1>
+<p>Find me in app/views/stockapp_home/index.html.erb</p>
+
+<ul class="hmenu">
+  <%= render 'devise/menu/registration_items' %>
+  <%= render 'devise/menu/login_items' %>
+</ul>
+
+<td><%= link_to "Create Item", new_item_path  %></td>
+<br/>
+<td><%= link_to "Create Categories", new_category_path  %></td>
+<br/>
+<td><%= link_to "Create Stock", new_stock_path  %></td>
+<br/>

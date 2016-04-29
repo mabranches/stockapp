@@ -2,7 +2,7 @@ default: &default
  adapter: postgresql
  encoding: utf8
  pool: 5
- username: stockapp_development
+ username: thiagofelipepecanha
  password: '@StockApp'
  host: localhost
 
