@@ -2,12 +2,12 @@
 
 <p>
   <strong>Item:</strong>
-  <%= @stock.item %>
+  <%= @stock.item.name %>
 </p>
 
 <p>
   <strong>Warehouse:</strong>
-  <%= @stock.warehouse %>
+  <%= @stock.warehouse.name %>
 </p>
 
 <%= link_to 'Edit', edit_stock_path(@stock) %> |

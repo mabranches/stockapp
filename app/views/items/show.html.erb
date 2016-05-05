@@ -12,7 +12,12 @@
 
 <p>
   <strong>Sub category:</strong>
-  <%= @item.sub_category %>
+  <%= @item.sub_category.name %>
+</p>
+
+<p>
+  <strong>SKU:</strong>
+  <%= @item.sku %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
