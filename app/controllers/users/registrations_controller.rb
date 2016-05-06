@@ -8,10 +8,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  def create
-    super
-    p "Creating a new user"
-  end
+  # def create
+  #   super
+  # end
 
   # GET /resource/edit
   # def edit
