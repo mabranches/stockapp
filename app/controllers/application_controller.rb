@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   protected
   def configure_permitted_exception_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |user|
-        user.permit(:name, :email, :password, :avatar)
+        user.permit(:name, :email, :password, :password_confirmation, :avatar)
     end
 
     devise_parameter_sanitizer.permit(:account_update) do |user|
