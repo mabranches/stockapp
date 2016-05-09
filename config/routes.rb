@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'stockapp_home/index'
+  default_url_options :host => 'stockapp.com'
 
   devise_for :users
   resources :stocks
