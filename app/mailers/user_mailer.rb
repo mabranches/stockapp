@@ -1,4 +1,7 @@
 class UserMailer < ApplicationMailer
+
+  layout 'mailer/common_layout'
+
   def new_user_greeting(user)
     @user = user
     mail to: @user.email, subject: "Welcome to StockApp" do |format|
