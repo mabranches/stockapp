@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
+    byebug
     @items = Item.all
   end
 
