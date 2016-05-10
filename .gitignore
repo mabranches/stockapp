@@ -12,4 +12,11 @@
 !/log/.keep
 /tmp
 .ruby-version
-config/database.yml
+
+/config/database*
+
+#Ignore Secrets
+/config/secrets*
+
+#Ignore avatars
+/public/system/users/avatars

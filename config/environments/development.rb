@@ -42,4 +42,18 @@ Rails.application.configure do
   #Inserting the ImageMagick bin location
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
+  #Setting GMAIL as an email sender
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'app.stockapp.com',
+    user_name: Rails.application.secrets.GMAIL_USERNAME,
+    password: Rails.application.secrets.GMAIL_PASSWORD,
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
+  config.action_mailer.perform_deliveries = true
+
 end

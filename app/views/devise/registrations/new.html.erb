@@ -25,11 +25,7 @@
     <%= f.label :avatar %><br/>
     <%= f.file_field :avatar %>
   </div>
-
-  <%= image_tag @user.avatar.url %>
-  <%= image_tag @user.avatar.url(:medium) %>
-  <%= image_tag @user.avatar.url(:thumb) %>
-
+  
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
