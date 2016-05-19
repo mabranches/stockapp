@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+ describe "User email" do
+   it "should generate an user mail" do
+     user = create(:user)
+     expect(user.email).to eq user.mail
+   end
+ end
 end
